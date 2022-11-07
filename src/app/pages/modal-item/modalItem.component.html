@@ -1,0 +1,22 @@
+<div *ngIf="visible" class="modal text-white">
+  <div class="modal-content">
+    <h3 style="text-align: center; margin: 0">Add Question:</h3>
+    <p style="color: red">{{errorMsg}}</p>
+    <label for="question">Question:</label>
+    <input #question type="text" class="form-control" id="question">
+
+    <label for="answer">Answer:</label>
+    <input #answer type="text" class="form-control" id="answer">
+
+    <label for="value">Value:</label>
+    <input #value type="number" class="form-control" id="value">
+
+    <label for="category">Category:</label>
+    <input #category type="text" class="form-control" id="category">
+
+    <div class="d-flex mt-1 flex-row">
+      <button class="btn btn-info me-2" (click)="addQuestion(question.value, answer.value, value.value, category.value)">Add</button>
+      <button class="btn btn-danger" (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
